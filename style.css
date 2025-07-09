@@ -1,10 +1,42 @@
-/* style.css */
+body {
+    margin: 0;
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    color: white;
+}
 
-/* ... (body, #game-container, canvas, #ui-container, #score の部分はそのまま) ... */
+#game-container {
+    position: relative;
+    border: 2px solid #fff;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
 
-/* 以下の #gameOverScreen から .hidden までを削除 */
+canvas {
+    display: block;
+    background-color: #000;
+}
 
-/*
+#ui-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* UIがゲームの操作を妨げないようにする */
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    color: white;
+}
+
 #gameOverScreen {
     position: absolute;
     top: 0;
@@ -17,13 +49,13 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    pointer-events: auto;
+    pointer-events: auto; /* ゲームオーバー画面ではボタンをクリックできるようにする */
 }
 
 #gameOverScreen h1 {
     font-size: 48px;
     margin: 0;
-    color: #ff4136;
+    color: #ff4136; /* 赤色 */
 }
 
 #gameOverScreen p {
@@ -34,7 +66,7 @@
     padding: 10px 20px;
     font-size: 18px;
     cursor: pointer;
-    background-color: #0074d9;
+    background-color: #0074d9; /* 青色 */
     color: white;
     border: none;
     border-radius: 5px;
@@ -48,4 +80,3 @@
 .hidden {
     display: none;
 }
-*/
